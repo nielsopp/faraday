@@ -77,5 +77,6 @@ The following files should appear in the output directory as the iteration progr
 * `m_e_XX.npy`: estimate for the extragalactic contribution to all data points (in rad/m^2)
 * `eta_i_XX`: correction factors for the error variances for the SIP data (according to Eq. 29 in the paper, where sigma_e and sigma_i are the initial guesses)
 * `eta_e_XX`: correction factor for the extragalactic variance
-* `Dhat_XX.npy`: map with an estimate for the uncertainty of the dimensionless foreground component (only calculated once per toplevel iteration)
+* `Dhat_XX.npy`: map with an estimate for the uncertainty variance of the dimensionless foreground component (only calculated once per toplevel iteration)
+
 All `.npy` files are binary numpy files, all others are ASCII files.

@@ -69,12 +69,13 @@ Before that, however, you will have to make a few adjustments:
 ### Output
 
 The following files should appear in the output directory as the iteration progresses:
-* `profmap_XX.npy`: profile function in map form (for ease of use)
-* `prof_XX`: profile function as an ASCII file; columns are Galactic latitude (in degrees) and profile function (in rad/m^2)
+* `profmap_XX.npy`: profile function in map form (for ease of use; in rad/m^2; only calculated once per toplevel iteration)
+* `prof_XX`: profile function as an ASCII file; columns are Galactic latitude (in degrees) and profile function (in rad/m^2; only calculated once per toplevel iteration)
 * `Cl_XX`: angular power spectrum as an ASCII file; rows are l = 0,1,2,....
 * `m_g_XX.npy`: map of the dimensionless foreground component
 * `m_g2_XX.npy`: map of the dimensionless foreground component made using only the VIP data (as an intermediate step)
 * `m_e_XX.npy`: estimate for the extragalactic contribution to all data points (in rad/m^2)
 * `eta_i_XX`: correction factors for the error variances for the SIP data (according to Eq. 29 in the paper, where sigma_e and sigma_i are the initial guesses)
 * `eta_e_XX`: correction factor for the extragalactic variance
+* `Dhat_XX.npy`: map with an estimate for the uncertainty of the dimensionless foreground component (only calculated once per toplevel iteration)
 All `.npy` files are binary numpy files, all others are ASCII files.

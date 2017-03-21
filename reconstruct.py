@@ -11,9 +11,6 @@ from scipy.sparse.linalg import LinearOperator as lo
 from scipy.sparse.linalg import cg
 import sys
 import scipy.integrate as integr
-import math
-#import pyfits as pf
-import astropy.io.fits as pf
 
 note = notification()
 about.lm2gl.off()
@@ -557,7 +554,7 @@ def calc_r(beta):
     """
     f = lambda x : np.log(x)*x**(beta-2)*np.exp(-x)
     a = integr.quad(f,0.,np.infty)[0]
-    r = np.exp(a/math.factorial(beta-1))
+    r = np.exp(a/np.math.factorial(beta-1))
     return r
 
 
